@@ -4,15 +4,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
     $comment = htmlspecialchars($_POST['comment']);
 
-    // Îòêðûâàåì ôàéë äëÿ çàïèñè
+    // ÐžÑ‚ÐºÑ€Ñ‹Ð²Ð°ÐµÐ¼ Ñ„Ð°Ð¹Ð» Ð´Ð»Ñ Ð·Ð°Ð¿Ð¸ÑÐ¸
     $file = fopen("crm.txt", "a");
     if ($file) {
-        // Çàïèñûâàåì äàííûå â ôàéë
-        fwrite($file, "Èìÿ: $name\nEmail: $email\nÊîììåíòàðèé: $comment\n\n");
+        // Ð—Ð°Ð¿Ð¸ÑÑ‹Ð²Ð°ÐµÐ¼ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð² Ñ„Ð°Ð¹Ð»
+        fwrite($file, "Ð˜Ð¼Ñ: $name\nEmail: $email\nÐšÐ¾Ð¼Ð¼ÐµÐ½Ñ‚Ð°Ñ€Ð¸Ð¹: $comment\n\n");
         fclose($file);
-        echo "Äàííûå óñïåøíî ñîõðàíåíû.";
+        echo "Ð”Ð°Ð½Ð½Ñ‹Ðµ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ñ‹.";
     } else {
-        echo "Îøèáêà ïðè îòêðûòèè ôàéëà äëÿ çàïèñè.";
+        echo "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ð¸ Ñ„Ð°Ð¹Ð»Ð° Ð´Ð»Ñ Ð·Ð°Ð¿Ð¸ÑÐ¸.";
     }
 }
 ?>
