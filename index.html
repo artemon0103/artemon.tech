@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Школа - Добро или Зло?</title>
+    <title>CRM Форма</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,21 +14,6 @@
         }
         h1 {
             color: #b30000;
-        }
-        h2 {
-            color: #660000;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .proof {
-            background-color: #e6e6e6;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-left: 4px solid #cc0000;
-        }
-        .hidden-content {
-            display: none;
         }
         .crm-form {
             margin-bottom: 20px;
@@ -50,44 +35,14 @@
             background-color: #cc0000;
         }
     </style>
-    <script>
-        function handleSubmit(event) {
-            event.preventDefault(); // Предотвращаем отправку формы
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var phone = document.getElementById("phone").value;
-            var content = document.getElementById("content");
-            
-            // Простейшая валидация
-            if (name && email && phone) {
-                content.style.display = "block";
-                document.getElementById("crm-form").style.display = "none";
-            } else {
-                alert("Пожалуйста, заполните все поля.");
-            }
-        }
-    </script>
 </head>
 <body>
-    <h1>Школа: Добро или Зло?</h1>
-    
-    <form id="crm-form" class="crm-form" onsubmit="handleSubmit(event)">
-        <label for="name">Имя:</label>
-        <input type="text" id="name" required>
-        <label for="email">Электронная почта:</label>
-        <input type="email" id="email" required>
-        <label for="phone">Номер телефона:</label>
-        <input type="tel" id="phone" required>
+    <h1>CRM Форма</h1>
+    <form class="crm-form" method="POST" action="save_crm.php">
+        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+        <input type="email" id="email" name="email" placeholder="Ваш email" required>
+        <input type="text" id="comment" name="comment" placeholder="Ваш комментарий" required>
         <button type="submit">Отправить</button>
     </form>
-    
-    <div id="content" class="hidden-content">
-        <h2>Место обучения:</h2>
-        <p>Многие из нас спрашивают, является ли школа местом, способствующим обучению, или же это просто необходимость в жизни. С одной стороны, школа предоставляет знания, навыки и общение с ровесниками, что безусловно полезно. С другой стороны, многие считают систему образования слишком жесткой и не способствующей раскрытию индивидуальности.</p>
-        <div class="proof">
-            <h3>Доказательства:</h3>
-            <p>Эксперты утверждают, что образовательные учреждения должны адаптироваться к потребностям студентов и учитывать их личные интересы.</p>
-        </div>
-    </div>
 </body>
 </html>
