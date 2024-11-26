@@ -3,46 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRM Форма</title>
+    <title>Portal 2</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
             color: #333;
         }
-        h1 {
-            color: #b30000;
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
-        .crm-form {
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        h2 {
+            color: #2980b9;
+        }
+        img {
+            width: 100%;
+            border-radius: 8px;
             margin-bottom: 20px;
         }
-        .crm-form input {
-            display: block;
-            margin-bottom: 10px;
-            padding: 8px;
-            width: 300px;
-        }
-        .crm-form button {
-            padding: 10px 15px;
-            background-color: #b30000;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
             color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .crm-form button:hover {
-            background-color: #cc0000;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>CRM Форма</h1>
-    <form class="crm-form" method="POST" action="save_crm.php">
-        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-        <input type="email" id="email" name="email" placeholder="Ваш email" required>
-        <input type="text" id="comment" name="comment" placeholder="Ваш комментарий" required>
-        <button type="submit">Отправить</button>
-    </form>
+
+<header>
+    <h1>Portal 2</h1>
+</header>
+
+<main>
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/02/Portal_2_Coverart.png" alt="Portal 2">
+    <h2>Об игре</h2>
+    <p>Portal 2 — это головоломка от первого лица, разработанная и изданная компанией Valve. Игра является продолжением Portal и была выпущена в апреле 2011 года.</p>
+    <p>В Portal 2 игроки возлагаются на управление персонажем по имени Чемберлин, который должен использовать портальные технологии для решения различных головоломок и продвижения по уровням. Игра включает множество новых механик, таких как передвижение по лазерам и использование конвейеров для создания ещё более сложных задач.</p>
+    
+    <h2>Геймплей</h2>
+    <p>Portal 2 отличается широким миром и сложными головоломками, которые требуют не только логического мышления, но и креативного подхода. В игре доступны элементы взаимодействия с окружающим миром, позволяющие игрокам исследовать различные способы преодоления препятствий.</p>
+
+    <h2>Проблемы и юмор</h2>
+    <p>Одним из ключевых аспектов игры является её насыщенный и остроумный юмор, который пронизывает все диалоги и ситуации. Персонажи, такие как ГЛаДОС и Уотси, стали культовыми и запомнившимися многим игрокам.</p>
+</main>
+
+<footer>
+    <p>&copy; 2024 Portal 2 Fan Page. Все права защищены.</p>
+</footer>
+
 </body>
 </html>
