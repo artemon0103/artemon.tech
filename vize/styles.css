@@ -1,0 +1,132 @@
+﻿/* Общие настройки */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Стили загрузочного экрана */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+}
+
+.loading-text {
+  color: #4caf50;
+  font-size: 24px;
+  margin-top: 20px;
+  animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0px #ff0000, -2px -2px #0000ff;
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+  20% {
+    text-shadow: -4px -4px #00ff00, 4px 4px #ff00ff;
+    transform: translate(-3px, 2px);
+    opacity: 1;
+  }
+  40% {
+    text-shadow: 5px 5px #ffff00, -5px -5px #ff0000;
+    transform: translate(3px, -4px);
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0px 0px 10px #00ff00;
+    transform: translate(1px, -1px);
+  }
+  80% {
+    transform: translate(-1px, 4px);
+    text-shadow: 2px 2px #0000ff, -1px -2px #ff00ff;
+    opacity: 0.9;
+  }
+  100% {
+    text-shadow: 0 0 0 #00ff00, 0 0 0 #ff0000;
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+/* Эффект "падающих букв" */
+.matrix {
+  color: #ff0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.matrix::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 255, 0, 0.5) 5%,
+    black 10%
+  );
+  background-size: 1px 20px;
+  animation: matrix-animation 4s linear infinite;
+}
+
+@keyframes matrix-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Визитка */
+.business-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: fade-in 10s forwards;
+}
+
+.business-card h1 {
+  font-size: 2em;
+  color: #4caf50; /* Зеленый цвет для текста */
+}
+
+.business-card p {
+  font-size: 1.2em;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
