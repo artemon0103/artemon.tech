@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Ãåíåðàöèÿ ñëó÷àéíîé ñòðîêè ñèìâîëîâ
   const generateMatrixString = () => {
-    const chars = 'dGhlVVNTUg==错误404';
+    const chars = 'アルテムdGhlVVNTUg==错误404';
     const length = Math.floor(Math.random() * 20) + 10; // äëèíà ñòðîêè ñëó÷àéíàÿ
     let result = '';
     for (let i = 0; i < length; i++) {
