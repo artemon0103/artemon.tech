@@ -1,13 +1,13 @@
-// Динамическое создание строк матрицы
+// Г„ГЁГ­Г Г¬ГЁГ·ГҐГ±ГЄГ®ГҐ Г±Г®Г§Г¤Г Г­ГЁГҐ Г±ГІГ°Г®ГЄ Г¬Г ГІГ°ГЁГ¶Г»
 document.addEventListener('DOMContentLoaded', () => {
   const matrixContainer = document.querySelector('.matrix');
   const loadingScreen = document.querySelector('.loading-screen');
   const businessCard = document.querySelector('.business-card');
 
-  // Генерация случайной строки символов
+  // ГѓГҐГ­ГҐГ°Г Г¶ГЁГї Г±Г«ГіГ·Г Г©Г­Г®Г© Г±ГІГ°Г®ГЄГЁ Г±ГЁГ¬ГўГ®Г«Г®Гў
   const generateMatrixString = () => {
-    const chars = '01abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-    const length = Math.floor(Math.random() * 20) + 10; // длина строки случайная
+    const chars = 'theUSSR';
+    const length = Math.floor(Math.random() * 20) + 10; // Г¤Г«ГЁГ­Г  Г±ГІГ°Г®ГЄГЁ Г±Г«ГіГ·Г Г©Г­Г Гї
     let result = '';
     for (let i = 0; i < length; i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -15,25 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
     return result;
   };
 
-  // Создание линии матрицы
+  // Г‘Г®Г§Г¤Г Г­ГЁГҐ Г«ГЁГ­ГЁГЁ Г¬Г ГІГ°ГЁГ¶Г»
   const createMatrixLine = () => {
     const matrixLine = document.createElement('div');
     matrixLine.classList.add('matrix-line');
     matrixLine.style.left = `${Math.random() * 100}vw`;
-    matrixLine.style.animationDuration = `${Math.random() * 3 + 2}s`; // Время анимации от 2 до 5 сек
+    matrixLine.style.animationDuration = `${Math.random() * 3 + 2}s`; // Г‚Г°ГҐГ¬Гї Г Г­ГЁГ¬Г Г¶ГЁГЁ Г®ГІ 2 Г¤Г® 5 Г±ГҐГЄ
     matrixLine.innerText = generateMatrixString();
     matrixContainer.appendChild(matrixLine);
 
-    // Удаляем линию после завершения анимации
+    // Г“Г¤Г Г«ГїГҐГ¬ Г«ГЁГ­ГЁГѕ ГЇГ®Г±Г«ГҐ Г§Г ГўГҐГ°ГёГҐГ­ГЁГї Г Г­ГЁГ¬Г Г¶ГЁГЁ
     matrixLine.addEventListener('animationend', () => {
       matrixContainer.removeChild(matrixLine);
     });
   };
 
-  // Создание нескольких линий матрицы каждые 100 мс
+  // Г‘Г®Г§Г¤Г Г­ГЁГҐ Г­ГҐГ±ГЄГ®Г«ГјГЄГЁГµ Г«ГЁГ­ГЁГ© Г¬Г ГІГ°ГЁГ¶Г» ГЄГ Г¦Г¤Г»ГҐ 100 Г¬Г±
   setInterval(createMatrixLine, 100);
 
-  // Отключение загрузочного экрана через 5 секунд
+  // ГЋГІГЄГ«ГѕГ·ГҐГ­ГЁГҐ Г§Г ГЈГ°ГіГ§Г®Г·Г­Г®ГЈГ® ГЅГЄГ°Г Г­Г  Г·ГҐГ°ГҐГ§ 5 Г±ГҐГЄГіГ­Г¤
   setTimeout(() => {
     loadingScreen.style.display = 'none';
   const businessCard = document.querySelector('.business-card');
