@@ -116,6 +116,7 @@ body {
 .business-card h1 {
   font-size: 2em;
   color: #4caf50; /* Зеленый цвет для текста */
+  animation: glitch 1.5s infinite;
 }
 
 .business-card p {
