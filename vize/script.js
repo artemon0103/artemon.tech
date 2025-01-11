@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const matrixLine = document.createElement('div');
     matrixLine.classList.add('matrix-line');
     matrixLine.style.left = `${Math.random() * 100}vw`;
-    matrixLine.style.animationDuration = `${Math.random() * 6 + 5}s`; // Âðåìÿ àíèìàöèè îò 2 äî 5 ñåê
+    matrixLine.style.animationDuration = `${Math.random() * 20 + 10}s`; // Âðåìÿ àíèìàöèè îò 2 äî 5 ñåê
     matrixLine.innerText = generateMatrixString();
     matrixContainer.appendChild(matrixLine);
 
@@ -38,5 +38,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingScreen.style.display = 'none';
   const businessCard = document.querySelector('.business-card');
   businessCard.classList.remove('hidden');
-}, 5000);
+}, 20000);
 });
