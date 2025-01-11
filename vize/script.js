@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const matrixLine = document.createElement('div');
     matrixLine.classList.add('matrix-line');
     matrixLine.style.left = `${Math.random() * 100}vw`;
-    matrixLine.style.animationDuration = `${Math.random() * 3 + 2}s`; // Âðåìÿ àíèìàöèè îò 2 äî 5 ñåê
+    matrixLine.style.animationDuration = `${Math.random() * 6 + 5}s`; // Âðåìÿ àíèìàöèè îò 2 äî 5 ñåê
     matrixLine.innerText = generateMatrixString();
     matrixContainer.appendChild(matrixLine);
 
