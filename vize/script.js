@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Ãåíåðàöèÿ ñëó÷àéíîé ñòðîêè ñèìâîëîâ
   const generateMatrixString = () => {
-    const chars = 'theUSSR';
+    const chars = 'dGhlVVNTUg==';
     const length = Math.floor(Math.random() * 20) + 10; // äëèíà ñòðîêè ñëó÷àéíàÿ
     let result = '';
     for (let i = 0; i < length; i++) {
